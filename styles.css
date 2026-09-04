@@ -20,6 +20,29 @@ body {
   overflow-x: hidden;
 }
 
+.tp-subpage {
+  min-height: 100vh;
+  background: #000;
+}
+
+.tp-home-link {
+  position: fixed;
+  top: 30px;
+  left: 32px;
+  z-index: 50;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+}
+
+.tp-home-link:hover,
+.tp-home-link:focus-visible {
+  opacity: 0.72;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -124,6 +147,11 @@ body {
   border-color: rgba(255, 255, 255, 0.9);
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
+}
+
+.tp-primary-nav-link[aria-current="page"] {
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .tp-mission-copy {
@@ -1388,6 +1416,12 @@ body {
   .toopeace-wrap {
     min-height: 100vh;
     min-height: 100svh;
+  }
+
+  .tp-home-link {
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
   }
 
   .tp-results {
