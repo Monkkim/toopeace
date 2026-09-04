@@ -12,6 +12,14 @@ assert.match(html, /data-carousel-dots/);
 assert.match(html, /class="tp-portfolio-detail"/);
 assert.doesNotMatch(html, /class="tp-case(?:\s|"|\/)/);
 
+const detailCategoryIndex = html.indexOf('data-portfolio-category');
+const detailResultsIndex = html.indexOf('data-portfolio-results');
+const carouselStageIndex = html.indexOf('class="tp-portfolio-stage"');
+const detailMediaIndex = html.indexOf('data-portfolio-media');
+assert.ok(detailCategoryIndex < carouselStageIndex, 'case heading should appear above the carousel');
+assert.ok(detailResultsIndex < carouselStageIndex, 'case results should appear above the carousel');
+assert.ok(carouselStageIndex < detailMediaIndex, 'case images should appear below the carousel');
+
 assert.match(js, /const PORTFOLIO_ITEMS = \[/);
 for (const asset of [
   'case-01-marketing.png',
@@ -51,6 +59,8 @@ assert.match(css, /\.tp-portfolio-carousel/);
 assert.match(css, /\.tp-portfolio-card/);
 assert.match(css, /data-position="0"/);
 assert.match(css, /\.tp-portfolio-detail/);
+assert.match(css, /--card-step:\s*190px/);
+assert.match(css, /--card-step:\s*138px/);
 assert.match(css, /@media \(max-width: 768px\)/);
 
 console.log('Portfolio carousel contract: PASS');

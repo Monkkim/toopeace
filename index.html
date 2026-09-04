@@ -91,6 +91,15 @@
       </div>
 
       <div class="tp-portfolio-carousel" data-portfolio-carousel tabindex="0" aria-label="포트폴리오 캐러셀">
+        <article class="tp-portfolio-detail" aria-live="polite">
+          <p class="tp-portfolio-detail-category" data-portfolio-category></p>
+          <h3 data-portfolio-title></h3>
+          <div class="tp-portfolio-results">
+            <p class="tp-portfolio-results-label">성과</p>
+            <ul data-portfolio-results></ul>
+          </div>
+        </article>
+
         <div class="tp-portfolio-stage">
           <button class="tp-carousel-arrow tp-carousel-arrow--prev" type="button" data-carousel-prev aria-label="이전 포트폴리오">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 5-7 7 7 7" /></svg>
@@ -107,24 +116,16 @@
 
         <div class="tp-carousel-dots" data-carousel-dots aria-label="포트폴리오 선택"></div>
 
-        <article class="tp-portfolio-detail" aria-live="polite">
-          <div class="tp-portfolio-detail-media" data-portfolio-media>
-            <figure data-portfolio-before hidden>
-              <figcaption>Before</figcaption>
-              <img src="" alt="" />
-            </figure>
-            <figure data-portfolio-after hidden>
-              <figcaption>After</figcaption>
-              <img src="" alt="" />
-            </figure>
-          </div>
-          <p class="tp-portfolio-detail-category" data-portfolio-category></p>
-          <h3 data-portfolio-title></h3>
-          <div class="tp-portfolio-results">
-            <p class="tp-portfolio-results-label">성과</p>
-            <ul data-portfolio-results></ul>
-          </div>
-        </article>
+        <div class="tp-portfolio-detail-media" data-portfolio-media>
+          <figure data-portfolio-before hidden>
+            <figcaption>Before</figcaption>
+            <img src="" alt="" />
+          </figure>
+          <figure data-portfolio-after hidden>
+            <figcaption>After</figcaption>
+            <img src="" alt="" />
+          </figure>
+        </div>
       </div>
 
       <div class="tp-results-outro">
