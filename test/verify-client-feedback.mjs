@@ -1,26 +1,28 @@
 import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 
-const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const home = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const portfolio = await readFile(new URL('../portfolio.html', import.meta.url), 'utf8');
+const story = await readFile(new URL('../story.html', import.meta.url), 'utf8');
 const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
 const js = await readFile(new URL('../app.js', import.meta.url), 'utf8');
 
-assert.doesNotMatch(html, /TRUE WORK, TRUE LIGHT/);
+assert.doesNotMatch(home, /TRUE WORK, TRUE LIGHT/);
 assert.doesNotMatch(js, /INTRO_TOTAL_MS|initIntroScrollLock/);
-assert.match(html, /class="tp-primary-nav tp-primary-nav--floating"/);
+assert.match(home, /class="tp-primary-nav tp-primary-nav--floating"/);
 assert.match(css, /\.tp-primary-nav--floating[\s\S]*?position:\s*fixed/);
 
 for (const platform of ['instagram', 'youtube', 'blog']) {
-  assert.match(html, new RegExp(`data-platform="${platform}"[^>]*href="https://`));
+  assert.match(home, new RegExp(`data-platform="${platform}"[^>]*href="https://`));
 }
 
-assert.match(html, /안녕하세요, 투피스에이전시입니다/);
-assert.doesNotMatch(html, /\b저는\b|\b저 역시\b|\b저도\b|저를 거쳐간/);
-assert.match(html, /assets\/client-feedback\/journey-02-replacement\.png/);
-assert.match(html, /assets\/client-feedback\/journey-04-replacement\.png/);
-assert.match(html, /assets\/client-feedback\/journey-05-replacement\.jpg/);
+assert.match(story, /안녕하세요, 투피스에이전시입니다/);
+assert.doesNotMatch(story, /\b저는\b|\b저 역시\b|\b저도\b|저를 거쳐간/);
+assert.match(story, /assets\/client-feedback\/journey-02-replacement\.png/);
+assert.match(story, /assets\/client-feedback\/journey-04-replacement\.png/);
+assert.match(story, /assets\/client-feedback\/journey-05-replacement\.jpg/);
 assert.match(
-  html,
+  story,
   /href="https:\/\/blog\.naver\.com\/apple1003_\/224295485682"[^>]*>[\s\S]*?더 보러가기/
 );
 
@@ -38,8 +40,8 @@ for (const title of [
 
 assert.match(js, /beforeImage:/);
 assert.match(js, /afterImage:/);
-assert.match(html, /data-portfolio-before/);
-assert.match(html, /data-portfolio-after/);
+assert.match(portfolio, /data-portfolio-before/);
+assert.match(portfolio, /data-portfolio-after/);
 
 for (const asset of [
   'portfolio-kimjuha-before.png',
