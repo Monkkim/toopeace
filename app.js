@@ -329,8 +329,8 @@ function initPortfolioCarousel() {
         const image = document.createElement("img");
         image.src = src;
         image.alt = `${activeItem.title} ${label} 이미지`;
-        image.loading = "lazy";
-        image.decoding = "async";
+        image.loading = "eager";
+        image.decoding = "sync";
         figure.append(caption, image);
         return figure;
       }),

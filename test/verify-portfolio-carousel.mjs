@@ -47,6 +47,11 @@ assert.equal((js.match(/category:/g) || []).length, 15);
 assert.match(js, /image:\s*null/);
 assert.match(js, /beforeImage:/);
 assert.match(js, /afterImage:/);
+assert.match(
+  js,
+  /detailMedia\.replaceChildren\([\s\S]*?image\.loading\s*=\s*"eager";[\s\S]*?image\.decoding\s*=\s*"sync";/,
+  'dynamically selected detail images should render immediately',
+);
 assert.match(js, /function initPortfolioCarousel\(\)/);
 assert.match(js, /renderPortfolio\(/);
 assert.match(js, /data-carousel-prev/);
