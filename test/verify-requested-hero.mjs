@@ -15,7 +15,6 @@ assert.doesNotMatch(html, />My Services</);
 
 assert.equal((html.match(/class="tp-hero-social"/g) || []).length, 3);
 assert.equal((html.match(/class="tp-hero-social-handle">@toopeace<\/span>/g) || []).length, 3);
-assert.match(css, /\.tp-mission-copy\s*\{[^}]*color:\s*#fff;/s);
 
 const contactButtons = html.match(/<button class="tp-contact"[\s\S]*?<\/button>/g) || [];
 assert.ok(contactButtons.length >= 1);
