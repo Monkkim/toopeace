@@ -25,6 +25,9 @@ assert.match(html, /class="tp-morph-icon tp-morph-icon--check"/);
 
 assert.match(css, /\.tp-contact:hover[\s\S]*?transform:\s*scale\(1\.02\)/);
 assert.match(css, /\.tp-contact:active[\s\S]*?transform:\s*scale\(0\.96\)/);
+assert.match(css, /\.tp-contact\s*\{[^}]*border:\s*1px solid rgba\(255,\s*255,\s*255,\s*0\.16\);/s);
+assert.match(css, /\.tp-contact\s*\{[^}]*linear-gradient\(\s*135deg,[^}]*rgba\(0,\s*0,\s*0,\s*0\.72\)\s*0%,[^}]*rgba\(0,\s*0,\s*0,\s*0\.6\)\s*60%,[^}]*rgba\(255,\s*255,\s*255,\s*0\.16\)\s*100%/s);
+assert.match(css, /\.tp-contact\s*\{[^}]*backdrop-filter:\s*blur\(10px\) saturate\(120%\);/s);
 assert.match(css, /\.tp-morph-icon--check/);
 assert.match(css, /\.tp-hero-social\s*\{[^}]*border:\s*1px solid rgba\(255,\s*255,\s*255,\s*0\.16\);[^}]*border-radius:\s*999px;/s);
 assert.match(css, /linear-gradient\(\s*135deg,[\s\S]*?rgba\(0,\s*0,\s*0,\s*0\.72\)\s*0%,[\s\S]*?rgba\(0,\s*0,\s*0,\s*0\.6\)\s*60%,[\s\S]*?rgba\(255,\s*255,\s*255,\s*0\.16\)\s*100%/);

@@ -236,13 +236,22 @@ body {
   margin-top: 34px;
   padding: 0 30px;
   gap: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   color: rgba(255, 255, 255, 0.92);
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 14px 34px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(14px) saturate(125%);
-  -webkit-backdrop-filter: blur(14px) saturate(125%);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(255, 255, 255, 0.16) 100%
+    ),
+    rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 10px 24px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
   cursor: pointer;
   font: inherit;
   font-size: 15px;
@@ -261,9 +270,18 @@ body {
 
 .tp-contact:hover {
   transform: scale(1.02);
-  border-color: rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 16px 38px rgba(0, 0, 0, 0.36);
+  border-color: rgba(255, 255, 255, 0.28);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.64) 0%,
+      rgba(0, 0, 0, 0.52) 60%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 14px 30px rgba(0, 0, 0, 0.4);
 }
 
 .toopeace-wrap.tp-visible .tp-contact:hover {
