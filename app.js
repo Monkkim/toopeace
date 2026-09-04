@@ -405,7 +405,7 @@ function initContactModal() {
   const closeBtn = modal.querySelector(".tp-modal-close");
   const successCloseBtn = modal.querySelector(".tp-modal-success-close");
 
-  document.querySelectorAll(".tp-contact").forEach((btn) => {
+  document.querySelectorAll("[data-contact-modal-open]").forEach((btn) => {
     btn.addEventListener("click", () => {
       form.reset();
       body.hidden = false;
