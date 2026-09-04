@@ -528,7 +528,7 @@ body {
 }
 
 .tp-portfolio-stage {
-  --card-step: 190px;
+  --card-step: 240px;
   position: relative;
   display: flex;
   width: 100%;
@@ -556,9 +556,9 @@ body {
   top: 50%;
   left: 50%;
   display: flex;
-  width: 180px;
-  height: 156px;
-  min-height: 156px;
+  width: 256px;
+  height: 144px;
+  min-height: 144px;
   flex-direction: column;
   align-items: center;
   gap: 0;
@@ -596,8 +596,8 @@ body {
 
 .tp-portfolio-card img {
   display: block;
-  width: 156px;
-  height: 156px;
+  width: 256px;
+  height: 144px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
   background: #111;
@@ -607,8 +607,8 @@ body {
 
 .tp-portfolio-card-placeholder {
   display: block;
-  width: 156px;
-  height: 156px;
+  width: 256px;
+  height: 144px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 18px;
   background:
@@ -1419,7 +1419,7 @@ body {
   }
 
   .tp-portfolio-stage {
-    --card-step: 138px;
+    --card-step: 170px;
     min-height: 236px;
     margin-top: 0;
   }
@@ -1430,9 +1430,9 @@ body {
   }
 
   .tp-portfolio-card {
-    width: 146px;
-    height: 132px;
-    min-height: 132px;
+    width: 192px;
+    height: 108px;
+    min-height: 108px;
     gap: 0;
     transform: translate(-50%, -50%) translateX(calc(var(--position) * var(--card-step))) rotate(calc(var(--position) * 5deg)) scale(0.68);
   }
@@ -1442,14 +1442,14 @@ body {
   }
 
   .tp-portfolio-card img {
-    width: 132px;
-    height: 132px;
+    width: 192px;
+    height: 108px;
     border-radius: 15px;
   }
 
   .tp-portfolio-card-placeholder {
-    width: 132px;
-    height: 132px;
+    width: 192px;
+    height: 108px;
     border-radius: 15px;
   }
 

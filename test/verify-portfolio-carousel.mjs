@@ -60,8 +60,10 @@ assert.match(css, /\.tp-portfolio-card/);
 assert.match(css, /data-position="0"/);
 assert.match(css, /\.tp-portfolio-detail/);
 assert.match(css, /\.tp-results-heading\s*\{[^}]*text-align:\s*center/s);
-assert.match(css, /--card-step:\s*190px/);
-assert.match(css, /--card-step:\s*138px/);
+assert.match(css, /--card-step:\s*240px/);
+assert.match(css, /\.tp-portfolio-card img\s*\{[^}]*width:\s*256px;[^}]*height:\s*144px;/s);
+assert.match(css, /--card-step:\s*170px/);
+assert.match(css, /@media \(max-width: 768px\)[\s\S]*?\.tp-portfolio-card img\s*\{[^}]*width:\s*192px;[^}]*height:\s*108px;/s);
 assert.match(css, /@media \(max-width: 768px\)/);
 
 console.log('Portfolio carousel contract: PASS');
