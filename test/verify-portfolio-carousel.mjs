@@ -61,6 +61,7 @@ assert.doesNotMatch(js, /images\.unsplash\.com/);
 assert.doesNotMatch(js, /tp-portfolio-card-title/);
 
 assert.match(css, /\.tp-portfolio-carousel/);
+assert.match(css, /\.tp-portfolio-carousel\s*\{[^}]*margin:\s*clamp\(36px,\s*5vw,\s*70px\)\s+auto\s+0;/s);
 assert.match(css, /\.tp-portfolio-card/);
 assert.match(css, /data-position="0"/);
 assert.match(css, /\.tp-portfolio-detail/);
