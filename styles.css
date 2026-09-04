@@ -139,7 +139,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
+  gap: clamp(8px, 2vw, 18px);
   margin: 30px 0 0;
 }
 
@@ -147,14 +147,16 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  padding: 0;
+  width: auto;
+  height: 40px;
+  gap: clamp(6px, 1vw, 9px);
+  padding: 0 clamp(10px, 1.2vw, 15px);
   border: 0;
+  border-radius: 999px;
   color: rgba(255, 255, 255, 0.72);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.08);
   text-decoration: none;
-  transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
 }
 
 .tp-hero-social[data-platform="instagram"] {
@@ -170,8 +172,8 @@ body {
 }
 
 .tp-hero-social:hover {
-  opacity: 0.72;
-  transform: translateY(-2px) scale(1.08);
+  background: rgba(255, 255, 255, 0.13);
+  transform: translateY(-2px);
 }
 
 .tp-hero-social:focus-visible {
@@ -182,11 +184,20 @@ body {
 .tp-hero-social svg {
   width: 20px;
   height: 20px;
+  flex: 0 0 20px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.7;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.tp-hero-social-handle {
+  color: #fff;
+  font-size: clamp(11px, 1.2vw, 14px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .tp-hero-social .tp-social-dot,

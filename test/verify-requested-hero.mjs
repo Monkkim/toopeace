@@ -14,8 +14,7 @@ assert.doesNotMatch(html, />My Story</);
 assert.doesNotMatch(html, />My Services</);
 
 assert.equal((html.match(/class="tp-hero-social"/g) || []).length, 3);
-assert.equal((html.match(/class="visually-hidden tp-hero-social-label"/g) || []).length, 3);
-assert.doesNotMatch(html, /<span>@toopeace<\/span>/);
+assert.equal((html.match(/class="tp-hero-social-handle">@toopeace<\/span>/g) || []).length, 3);
 
 const contactButtons = html.match(/<button class="tp-contact"[\s\S]*?<\/button>/g) || [];
 assert.ok(contactButtons.length >= 1);
@@ -27,6 +26,8 @@ assert.match(html, /class="tp-morph-icon tp-morph-icon--check"/);
 assert.match(css, /\.tp-contact:hover[\s\S]*?transform:\s*scale\(1\.02\)/);
 assert.match(css, /\.tp-contact:active[\s\S]*?transform:\s*scale\(0\.96\)/);
 assert.match(css, /\.tp-morph-icon--check/);
+assert.match(css, /\.tp-hero-social\s*\{[^}]*border-radius:\s*999px;[^}]*background:\s*rgba\(255,\s*255,\s*255,\s*0\.08\);/s);
+assert.match(css, /\.tp-hero-social-handle\s*\{[^}]*color:\s*#fff;/s);
 assert.match(js, /mouseenter/);
 assert.match(js, /mouseleave/);
 assert.match(js, /classList\.toggle\("is-hovered", hovered\)/);
