@@ -1,0 +1,88 @@
+.work-page { background: #090909; color: #fff; padding: 140px 28px 100px; }
+.work-shell { max-width: 1120px; margin: auto; }
+.work-intro { max-width: 860px; margin: 0 auto 56px; text-align: center; }
+.work-kicker { color: #898989; font: 11px Arial, sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+.work-intro h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.2; letter-spacing: -.055em; word-break: keep-all; margin: 24px 0; }
+.work-intro p:last-child { color: #aaa; line-height: 1.8; font-size: 16px; }
+.work-jumps { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 84px; }
+.work-jumps a { color: #ccc; text-decoration: none; background: #1c1c1c; border-radius: 999px; padding: 11px 17px; font-size: 13px; }
+.work-jumps a:hover { color: #fff; background: #303030; }
+.work-group { scroll-margin-top: 95px; margin-bottom: 100px; }
+.work-group-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid #292929; padding-bottom: 20px; margin-bottom: 32px; }
+.work-group-heading h2 { margin: 0; font-size: clamp(24px, 3vw, 34px); letter-spacing: -.04em; word-break: keep-all; line-height: 1.4; }
+.work-group-heading span { color: #777; font: 12px Arial, sans-serif; }
+.work-case { margin: 0 0 64px; padding: 32px; background: #111; border: 1px solid #232323; border-radius: 24px; overflow: hidden; }
+.work-case-head { display: flex; align-items: start; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
+.work-case h3 { font-size: clamp(23px, 3vw, 32px); letter-spacing: -.04em; margin: 9px 0 12px; word-break: keep-all; }
+.work-role { color: #aaa; font-size: 13px; line-height: 1.8; margin: 0; }
+.work-link { color: #ddd; text-decoration: none; font-size: 13px; white-space: nowrap; border-bottom: 1px solid #555; padding: 8px 0; }
+.work-metrics { display: flex; flex-wrap: wrap; gap: 12px 40px; margin: 0 0 28px; padding: 20px 0; border-top: 1px solid #292929; }
+.work-metric strong { display: block; font-size: clamp(24px, 3.5vw, 40px); font-weight: 500; letter-spacing: -.04em; }
+.work-metric span { display: block; color: #999; font-size: 12px; margin-top: 7px; }
+.work-pair, .work-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.work-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.work-frame { margin: 0; min-width: 0; }
+.work-frame figcaption { display: flex; align-items: center; gap: 8px; color: #999; font: 11px Arial, sans-serif; letter-spacing: .14em; margin: 0 0 12px; }
+.work-frame figcaption::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #666; }
+.work-frame--after figcaption { color: #fff; }
+.work-frame--after figcaption::before { background: #a8e5b6; }
+.work-image { display: flex; align-items: center; justify-content: center; border-radius: 14px; overflow: hidden; background: #191919; }
+.work-image img { display: block; width: 100%; height: auto; max-height: 650px; object-fit: contain; }
+.work-frame a { display: block; }
+.work-results-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.work-results-grid .work-image { background: #141414; }
+.work-results-grid img { max-height: none; }
+.work-results-grid figcaption { margin: 12px 0 0; color: #ccc; letter-spacing: 0; font-size: 13px; }
+.work-training { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.work-training img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.work-close { text-align: center; padding: 32px 0; }
+.work-close h2 { font-size: clamp(25px, 3vw, 38px); letter-spacing: -.04em; }
+.work-close a { display: inline-block; background: #222; color: white; border-radius: 999px; text-decoration: none; padding: 14px 22px; }
+.work-note { color: #777; line-height: 1.7; font-size: 12px; }
+.work-section-copy { margin: -8px 0 28px; color: #aaa; font-size: 15px; line-height: 1.8; }
+.work-support { max-width: 460px; margin: 24px auto 0; }
+.work-business-grid, .work-comparison-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.work-business-grid .work-case, .work-comparison-grid .work-case { margin-bottom: 24px; }
+.work-business-grid .work-case-head { flex-direction: column; gap: 0; }
+.work-student-media { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); align-items: center; gap: 24px; }
+.work-pair .work-image { height: 100%; }
+.work-pair .work-frame { display: flex; flex-direction: column; }
+.work-pair .work-frame > a { display: flex; flex: 1; }
+.work-pair .work-frame > a .work-image { height: auto; width: 100%; }
+#kimjooha-youtube .work-image {
+  aspect-ratio: 1748 / 504;
+  height: auto;
+  position: relative;
+  background: #0f0f0f;
+}
+#kimjooha-youtube .work-frame--after .work-image img {
+  position: absolute;
+  width: 150%;
+  max-width: none;
+  max-height: none;
+  left: 0;
+  top: 0;
+}
+.work-comparison-grid .work-metric strong { font-size: clamp(23px, 2.4vw, 32px); }
+.work-training { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; }
+.work-jumps a:focus-visible, .work-link:focus-visible, .work-frame a:focus-visible, .work-close a:focus-visible { outline: 2px solid white; outline-offset: 5px; }
+@media (max-width: 768px) {
+  .work-page { padding: 92px 18px 110px; }
+  .work-intro { margin-bottom: 30px; }
+  .work-jumps { margin-bottom: 52px; gap: 6px; }
+  .work-jumps a { padding: 10px 12px; font-size: 12px; }
+  .work-group { margin-bottom: 60px; }
+  .work-group-heading span { display: none; }
+  .work-case { padding: 20px 16px; border-radius: 18px; margin-bottom: 28px; }
+  .work-case-head { flex-direction: column; gap: 4px; }
+  .work-pair { gap: 10px; }
+  .work-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .work-results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+  .work-metrics { gap: 20px; }
+  .work-training { gap: 12px; }
+  .work-business-grid, .work-comparison-grid, .work-student-media { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .work-business-grid .work-case, .work-comparison-grid .work-case { margin-bottom: 12px; }
+  .work-training { grid-template-columns: minmax(0, 1fr); }
+  .work-support { max-width: 100%; }
+  .work-frame figcaption { font-size: 10px; letter-spacing: .04em; gap: 5px; min-height: 24px; }
+}

@@ -16,7 +16,7 @@ for (const platform of ['instagram', 'youtube', 'blog']) {
   assert.match(home, new RegExp(`data-platform="${platform}"[^>]*href="https://`));
 }
 
-assert.match(story, /안녕하세요, 투피스에이전시입니다/);
+assert.match(story, /안녕하세요, 투피스 입니다/);
 assert.doesNotMatch(story, /\b저는\b|\b저 역시\b|\b저도\b|저를 거쳐간/);
 assert.match(story, /assets\/client-feedback\/journey-02-replacement\.png/);
 assert.match(story, /assets\/client-feedback\/journey-04-replacement\.png/);
@@ -40,8 +40,8 @@ for (const title of [
 
 assert.match(js, /beforeImage:/);
 assert.match(js, /afterImage:/);
-assert.match(portfolio, /data-portfolio-before/);
-assert.match(portfolio, /data-portfolio-after/);
+assert.match(portfolio, /BEFORE ·/);
+assert.match(portfolio, /AFTER ·/);
 
 for (const asset of [
   'portfolio-kimjuha-before.png',

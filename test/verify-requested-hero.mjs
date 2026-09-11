@@ -7,7 +7,7 @@ const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
 const js = await readFile(new URL('../app.js', import.meta.url), 'utf8');
 
 assert.match(html, /class="tp-primary-nav tp-primary-nav--floating"/);
-for (const label of ['Portfolio', 'Story', 'Services']) {
+for (const label of ['Portfolio', 'Education', 'Contact']) {
   assert.match(html, new RegExp(`>${label}<`));
 }
 assert.doesNotMatch(html, />My Portfolio</);

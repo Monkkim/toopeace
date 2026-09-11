@@ -7,7 +7,7 @@ const story = await readFile(new URL('../story.html', import.meta.url), 'utf8');
 const services = await readFile(new URL('../services.html', import.meta.url), 'utf8');
 const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
 
-assert.match(portfolio, /<section class="tp-results" id="portfolio"/);
+assert.match(portfolio, /<main class="tp-subpage work-page" id="portfolio"/);
 assert.match(story, /<section class="tp-journey" id="story"/);
 assert.match(services, /<section class="tp-services" id="services"/);
 
@@ -15,7 +15,7 @@ for (const html of [home, portfolio, story, services]) {
   assert.match(html, /class="tp-primary-nav tp-primary-nav--floating"/);
 }
 
-for (const label of ['Portfolio', 'Story', 'Services']) {
+for (const label of ['Portfolio', 'Education', 'Contact']) {
   assert.match(home, new RegExp(`class="tp-primary-nav-link"[^>]*>${label}<`));
 }
 

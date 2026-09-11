@@ -14,14 +14,15 @@ const [home, portfolio, story, services, css, js] = await Promise.all([
 for (const html of [home, portfolio, story, services]) {
   assert.match(html, /href="\.\/portfolio\.html"/);
   assert.match(html, /href="\.\/story\.html"/);
-  assert.match(html, /href="\.\/services\.html"/);
+  assert.match(html, /href="\.\/index\.html#contact"[^>]*>Contact<\/a>/);
+  assert.doesNotMatch(html, />Services<\/a>/);
 }
 
 assert.match(home, /class="toopeace-wrap"/);
 assert.doesNotMatch(home, /id="portfolio"|id="story"|id="services"/);
 
 assert.match(portfolio, /id="portfolio"/);
-assert.match(portfolio, /<h2 id="results-title">/);
+assert.match(portfolio, /<h1 id="results-title">/);
 assert.doesNotMatch(portfolio, /id="story"|id="services"|class="toopeace-wrap"/);
 assert.match(story, /id="story"/);
 assert.match(story, /<h2 id="journey-title">/);
@@ -33,7 +34,7 @@ assert.doesNotMatch(services, /id="portfolio"|id="story"|class="toopeace-wrap"/)
 
 for (const html of [portfolio, story, services]) {
   assert.match(html, /class="tp-home-link" href="\.\/index\.html"/);
-  assert.equal((html.match(/aria-current="page"/g) || []).length, 1);
+  assert.equal((html.match(/aria-current="page"/g) || []).length, html === services ? 0 : 1);
 }
 
 assert.match(css, /\.tp-home-link\s*\{[^}]*position:\s*fixed;/s);

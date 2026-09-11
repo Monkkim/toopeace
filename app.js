@@ -405,6 +405,20 @@ function initContactModal() {
   const closeBtn = modal.querySelector(".tp-modal-close");
   const successCloseBtn = modal.querySelector(".tp-modal-success-close");
 
+  const openContact = () => {
+    form.reset();
+    body.hidden = false;
+    success.hidden = true;
+    if (!modal.open) modal.showModal();
+  };
+  document.querySelectorAll('a[href="./index.html#contact"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      openContact();
+    });
+  });
+  if (window.location.hash === "#contact") openContact();
+
   document.querySelectorAll("[data-contact-modal-open]").forEach((btn) => {
     btn.addEventListener("click", () => {
       form.reset();

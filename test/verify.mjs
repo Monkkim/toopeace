@@ -22,8 +22,9 @@ assert.match(home, /class="tp-contact"/);
 assert.match(portfolio, /id="portfolio"/);
 assert.match(story, /id="story"/);
 assert.match(services, /id="services"/);
-assert.match(portfolio, /data-portfolio-carousel/);
-assert.match(story, /안녕하세요, 투피스에이전시입니다/);
+assert.match(portfolio, /id="content-results"/);
+assert.doesNotMatch(portfolio, /data-portfolio-carousel/);
+assert.match(story, /안녕하세요, 투피스 입니다/);
 assert.equal((story.match(/class="tp-journey-step(?:\s[^"]*)?"/g) || []).length, 5);
 
 assert.match(css, /@media\s*\(max-width:\s*768px\)/);

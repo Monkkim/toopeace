@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Toopeace</title>
-    <link rel="stylesheet" href="./styles.css?v=20260904-feedback" />
-    <script src="./app.js?v=20260904-feedback" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20260907-mobile-top" />
+    <script src="./app.js?v=20260907-contact-nav" defer></script>
   </head>
   <body>
     <nav class="tp-primary-nav tp-primary-nav--floating" aria-label="주요 메뉴">
       <a class="tp-primary-nav-link" href="./portfolio.html">Portfolio</a>
-      <a class="tp-primary-nav-link" href="./story.html">Story</a>
-      <a class="tp-primary-nav-link" href="./services.html">Services</a>
+      <a class="tp-primary-nav-link" href="./story.html">Education</a>
+      <a class="tp-primary-nav-link" href="./index.html#contact">Contact</a>
     </nav>
 
     <main class="toopeace-wrap" aria-labelledby="page-title">
@@ -44,25 +44,33 @@
           그 가치를 가장 빛나는 방식으로 전합니다
         </p>
         <div class="tp-hero-socials" aria-label="투피스 채널">
-          <a class="tp-hero-social" data-platform="instagram" href="https://www.instagram.com/toopeace/" target="_blank" rel="noreferrer" aria-label="Instagram @toopeace">
+          <a class="tp-hero-social" data-platform="instagram" href="https://www.instagram.com/toopeace_r/" target="_blank" rel="noreferrer" aria-label="Instagram @toopeace">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="1" class="tp-social-dot" />
+              <defs>
+                <linearGradient id="instagram-brand" x1="0" y1="1" x2="0.8" y2="0">
+                  <stop offset="0%" stop-color="#ffdc80" />
+                  <stop offset="25%" stop-color="#fcaf45" />
+                  <stop offset="50%" stop-color="#f56040" />
+                  <stop offset="75%" stop-color="#dd2a7b" />
+                  <stop offset="100%" stop-color="#a020f0" />
+                </linearGradient>
+              </defs>
+              <rect class="tp-instagram-outline" x="2.5" y="2.5" width="19" height="19" rx="5.5" />
+              <circle class="tp-instagram-outline" cx="12" cy="12" r="4.5" />
+              <circle cx="18" cy="6" r="1.3" class="tp-instagram-dot" />
             </svg>
             <span class="tp-hero-social-handle">@toopeace</span>
           </a>
-          <a class="tp-hero-social" data-platform="youtube" href="https://www.youtube.com/@toopeace" target="_blank" rel="noreferrer" aria-label="YouTube @toopeace">
+          <a class="tp-hero-social" data-platform="youtube" href="https://www.youtube.com/@%ED%88%AC%ED%94%BC%EC%8A%A4-toopeace" target="_blank" rel="noreferrer" aria-label="YouTube @toopeace">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <rect x="3" y="6" width="18" height="12" rx="4" />
-              <path d="m10 9 5 3-5 3Z" class="tp-social-play" />
+              <path class="tp-youtube-body" d="M23 7.1a3 3 0 0 0-2.1-2.2C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7.1C.5 9 .5 12 .5 12s0 3 .5 4.9a3 3 0 0 0 2.1 2.2c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.2c.5-1.9.5-4.9.5-4.9s0-3-.5-4.9Z" />
+              <path d="m9.6 8.4 6.2 3.6-6.2 3.6Z" class="tp-youtube-play" />
             </svg>
             <span class="tp-hero-social-handle">@toopeace</span>
           </a>
           <a class="tp-hero-social" data-platform="blog" href="https://blog.naver.com/apple1003_/224295485682" target="_blank" rel="noreferrer" aria-label="Blog @toopeace">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M12 20.5c7 0 8.5-1.5 8.5-8.5S19 3.5 12 3.5 3.5 5 3.5 12c0 4.5.6 6.9 2.9 7.9L5.6 22z" />
-              <path d="M8 10h8 M8 14h5" />
+            <svg class="tp-blog-brand" viewBox="100 88 312 337" aria-hidden="true" focusable="false">
+              <image href="./assets/blog-brand.png" width="512" height="512" />
             </svg>
             <span class="tp-hero-social-handle">@toopeace</span>
           </a>
