@@ -399,16 +399,11 @@ function initContactModal() {
   const modal = document.getElementById("contact-modal");
   if (!modal || typeof modal.showModal !== "function") return;
 
-  const form = modal.querySelector(".tp-modal-form");
-  const body = modal.querySelector(".tp-modal-body");
-  const success = modal.querySelector(".tp-modal-success");
+  const iframe = modal.querySelector(".tp-contact-iframe");
   const closeBtn = modal.querySelector(".tp-modal-close");
-  const successCloseBtn = modal.querySelector(".tp-modal-success-close");
 
   const openContact = () => {
-    form.reset();
-    body.hidden = false;
-    success.hidden = true;
+    if (iframe && !iframe.hasAttribute("src")) iframe.src = iframe.dataset.src;
     if (!modal.open) modal.showModal();
   };
   document.querySelectorAll('a[href="./index.html#contact"]').forEach((link) => {
@@ -420,28 +415,15 @@ function initContactModal() {
   if (window.location.hash === "#contact") openContact();
 
   document.querySelectorAll("[data-contact-modal-open]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      form.reset();
-      body.hidden = false;
-      success.hidden = true;
-      modal.showModal();
-    });
+    btn.addEventListener("click", openContact);
   });
 
   closeBtn.addEventListener("click", () => modal.close());
-  successCloseBtn.addEventListener("click", () => modal.close());
 
   modal.addEventListener("click", (event) => {
     if (event.target === modal) modal.close();
   });
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    // TODO: 폼 전송 백엔드 연동 전까지는 콘솔로만 기록하는 샘플
-    console.log("[contact]", Object.fromEntries(new FormData(form)));
-    body.hidden = true;
-    success.hidden = false;
-  });
 }
 
 function initMorphButtons() {

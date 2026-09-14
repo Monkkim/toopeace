@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Toopeace</title>
-  <link rel="stylesheet" href="./styles.css?v=20260907-mobile-top" />
-    <script src="./app.js?v=20260907-contact-nav" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20260914-smore" />
+    <script src="./app.js?v=20260914-smore" defer></script>
   </head>
   <body>
     <nav class="tp-primary-nav tp-primary-nav--floating" aria-label="주요 메뉴">
@@ -91,45 +91,15 @@
 
     </main>
 
-    <dialog class="tp-contact-modal" id="contact-modal" aria-labelledby="contact-modal-title">
-      <form class="tp-modal-form">
+    <dialog class="tp-contact-modal tp-contact-modal--embed" id="contact-modal" aria-labelledby="contact-modal-title">
+      <div class="tp-embed-header">
+        <h2 id="contact-modal-title">문의하기</h2>
         <button class="tp-modal-close" type="button" aria-label="닫기">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M6 6 18 18 M18 6 6 18" />
-          </svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6 18 18 M18 6 6 18" /></svg>
         </button>
-
-        <div class="tp-modal-body">
-          <p class="tp-modal-eyebrow">CONTACT</p>
-          <h2 id="contact-modal-title">문의하기</h2>
-          <p class="tp-modal-desc">
-            연락처를 남겨주시면 확인 후<br class="tp-br-mobile" />
-            빠르게 연락드리겠습니다
-          </p>
-
-          <label class="tp-modal-field">
-            <span>이름</span>
-            <input name="name" type="text" required autocomplete="name" placeholder="이름을 입력해주세요" />
-          </label>
-          <label class="tp-modal-field">
-            <span>연락처</span>
-            <input name="phone" type="tel" required autocomplete="tel" placeholder="010-0000-0000" />
-          </label>
-          <label class="tp-modal-field">
-            <span>이메일</span>
-            <input name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
-          </label>
-
-          <button class="tp-modal-submit" type="submit">문의 보내기</button>
-        </div>
-
-        <div class="tp-modal-success" hidden>
-          <p class="tp-modal-eyebrow">THANK YOU</p>
-          <h2>문의가 접수되었습니다</h2>
-          <p class="tp-modal-desc">확인 후 빠른 시일 내에<br class="tp-br-mobile" /> 연락드리겠습니다</p>
-          <button class="tp-modal-submit tp-modal-success-close" type="button">닫기</button>
-        </div>
-      </form>
+      </div>
+      <iframe class="tp-contact-iframe" data-src="https://smore.im/form/tjaM4diNYU" height="650" width="420" style="border: 0;" title="투피스 문의 신청 폼" allowfullscreen></iframe>
+      <p class="tp-embed-fallback">폼이 보이지 않나요? <a href="https://smore.im/form/tjaM4diNYU" target="_blank" rel="noopener noreferrer">새 창에서 열기</a></p>
     </dialog>
   </body>
 </html>
