@@ -20,13 +20,6 @@ const PORTFOLIO_ITEMS = [
     results: ["3개월 만에 팔로워 5만 성장", "기획·제작 프로세스 팀 내재화"],
   },
   {
-    category: "CHANNEL OPERATION",
-    title: "듀오링고 채널 운영",
-    image: null,
-    alt: "듀오링고 코리아 채널 운영 사례",
-    results: ["채널 기획·촬영·편집·업로드 운영", "인스타그램 팔로워 19.9만 채널"],
-  },
-  {
     category: "SLEEP EDUCATION",
     title: "김주하 아기수면연구소",
     image: "./assets/client-feedback/portfolio-extra-05.png",
