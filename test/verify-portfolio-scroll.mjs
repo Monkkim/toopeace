@@ -8,7 +8,7 @@ for (const match of html.matchAll(/href="#([^"]+)"/g)) {
   assert.ok(ids.includes(match[1]), `Missing section: ${match[1]}`);
 }
 const images = [...html.matchAll(/<img\b[^>]+>/g)].map(m => m[0]);
-assert.equal(images.length, 43, 'YouTube before/after pair retained; 16.4만 finance card removed');
+assert.equal(images.length, 41, 'YouTube before/after pair retained; 16.4만 finance card and Duolingo channel section removed');
 const sources = new Set();
 for (const image of images) {
   const src = image.match(/src="([^"]+)"/)[1];
